@@ -12,7 +12,6 @@ def checking():
     global word, run
     if word in meme_dict.keys():
         print(word,":", meme_dict[word])
-        run = False
     else:
         print("there is no word like that in ")
         
