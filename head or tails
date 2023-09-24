@@ -1,0 +1,37 @@
+import random as r
+
+import time as t
+
+list = [
+    "orzel",
+    "reszka"
+]
+computer_points = 0
+player_points = 0
+computer_pick = 0
+player_pick = 0
+run = True
+while run:
+    print("punkty gracza:", player_points)
+    print("punkty komputera:", computer_points)
+    print("orzel czy reszka (o dla orze;, r dla reszka)", end=" ")
+    player_pick = input(">>")
+    if player_pick in ["o","O"]:
+        player_pick = list[0]
+    if player_pick in ["r","R"]:
+        player_pick = list[1]
+    if player_pick not in ["o","r","O","R"]:
+        player_pick = r.choice(list)
+    computer_pick = r.choice(list)
+    print("3")
+    t.sleep(0.5)
+    print("2")
+    t.sleep(0.5)
+    print("1")
+    t.sleep(0.5)
+    if player_pick == computer_pick:
+        print("poprawnie! :D")
+        player_points += 1
+    if player_pick != computer_pick:
+        print("zle D:")
+        computer_points += 1
